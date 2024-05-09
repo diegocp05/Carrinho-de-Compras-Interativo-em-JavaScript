@@ -1,0 +1,236 @@
+
+body{
+margin: 0px;
+font-family:'Poppins';
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.container{
+    /* text-align: center; */
+    width: 100%;
+    padding-top: 10px; 
+    /* margin: auto; */
+    border-bottom: 2px solid rgb(231, 231, 231);
+}
+.title{
+    /* position: relative; */
+    margin-left: 10%;
+    font-size: xx-large;
+}
+
+.bag{
+    margin-right: 10%;
+    cursor: pointer;
+}
+
+.shoppingTitle{
+    font-size: 40px;
+    text-align: center;
+    padding: 50px;
+    font-weight: 600;
+}
+
+.listProduct{
+    width: fit-content auto;
+    display: grid;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 90px;
+    margin-top: 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    
+    /* background-color: yellow; */
+    /* height: 550px; */
+}
+
+
+.listProduct .item img{
+    width: 400px;
+    background-color: black;
+}
+
+.listProduct .item .addToCart{
+    /* position: absolute; */
+    margin-left: 352px;
+    /* margin-bottom: 100px; */
+    background-color: black;
+    color:white;
+}
+
+.listProduct .item .price{
+    font-weight: 500;
+    font-size: x-large;
+    height: 0;
+    background-color: blueviolet;
+
+}
+
+.listProduct .item{
+    /* background-color: blue; */
+    width: 400px;
+    /* border: 2px solid black; */
+}
+
+.listProduct .item:hover{
+    border: 2px solid black;
+}
+
+.listProduct .item:hover img,
+.listProduct .item:hover .price {
+    transform: scale(0.9); /* Reduz a escala apenas nos elementos internos ao passar o mouse */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.cartTab{
+    width: 800px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    right: -800px;
+    bottom: 0;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    transition: 0.5s;
+}
+
+body.showCart .cartTab{
+    right: 0px;
+}
+
+.cartTab .cartTabTitle{
+    /* background-color: chocolate; */
+    font-weight: 600;
+    font-size: 35px;
+
+    margin: 5%;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-top: 90px;
+    margin-top: 20px;
+
+}
+
+.cartTab .buy{
+    border: none;
+    color: white;
+    font-size: x-large;
+    font-weight: 550;
+    background-color: #fc5444;
+    width: 150px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.cartTab .btn .close{
+    border:none;
+    background-color: white;
+    position: relative;
+    right: -300px;
+    top: 100px;
+    cursor: pointer;
+}
+
+
+.cartTab .total{
+    position: relative;
+    margin-top: 0px;
+    right: -220px;
+    /* background-color: yellow; */
+}
+
+.cartTab .listCartTab{
+    display: grid;
+    grid-template-columns: 1fr;
+    /* background-color: aqua; */
+    padding-top: 30px;
+    padding-left: 40px;
+    text-align: left;
+    gap: 40px;
+    /* background-color: blue; */
+    
+}
+
+.cartTab .image img{
+    width: 150px;
+    height: 145px;
+    position: relative;
+    /* background-color: aqua; */
+}
+
+.cartTab .listCartTab .item .name{
+    margin-left: 200px;
+    margin-right:280px;
+    margin-top: 0px;
+    position: relative;
+    font-size:x-large;
+    font-weight: 500;
+    bottom: 150px;
+    /* background-color: aqua; */
+}
+
+.cartTab .listCartTab .item .priceTab{
+    margin-left: 200px;
+    margin-right:280px;
+    bottom: 95px;
+    position: relative;
+    font-size: x-large;
+    font-weight: 500;
+    /* background-color: aqua; */
+}
+
+.cartTab .listCartTab .item .delete{
+    margin-left: 550px;
+    position: relative;
+    margin-top: -180px;
+    color: #fc5444;
+    cursor: pointer;
+    /* background-color: aqua; */
+}
+
+.cartTab .listCartTab .item {
+    position: relative;
+    padding-bottom: 100px;
+    /* background-color: blueviolet; */
+}
+
+.cartTab .listCartTab .item .cart-quantity {
+    position: absolute;
+    width: 45px;
+    height: 35px;
+    font-size: x-large;
+    bottom: 30px; /* Ajuste conforme necessário */
+    left: 200px; /* Ajuste conforme necessário */
+    /* background-color: rgb(7, 97, 97); */
+}
+
+
+@media (max-width: 2175px) {
+    .listProduct{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1670px) {
+    .listProduct{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1160px) {
+    .listProduct{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .listProduct .item{
+        
+    }
+}
